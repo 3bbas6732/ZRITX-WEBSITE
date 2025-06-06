@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZRITX WEB - Home</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="images/Z logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Learn.html">Learn</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="viewToggle" class="view-toggle">
+            📱
+        </button>
+    </header>
+
+<h1>Welcome To ZRITX WEBSITE</h1>
+<p>You can learn and list our songs and more!</p>
+
+            <header>
+    <!-- ...existing code... -->
+</header>
+
+
+
+<main>
+    <!-- ...existing code... -->
+</main>
+
+<button onclick="smoothScroll(800)" class="scroll-btn">Go To Videos</button>
+
+    <script>
+    function smoothScroll(targetHeight) {
+        const startPosition = window.pageYOffset;
+        const distance = targetHeight - startPosition;
+        const duration = 1000;
+        let start = null;
+
+        function animation(currentTime) {
+            if (start === null) start = currentTime;
+            const timeElapsed = currentTime - start;
+            const run = ease(timeElapsed, startPosition, distance, duration);
+            window.scrollTo(0, run);
+            if (timeElapsed < duration) requestAnimationFrame(animation);
+        }
+
+        function ease(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t + b;
+            t--;
+            return -c / 2 * (t * (t - 2) - 1) + b;
+        }
+
+        requestAnimationFrame(animation);
+    }
+    </script>
+
+    
+<main>
+    <section class="cards-container">        <div class="card">
+            <h2>Funk Do Saci</h2>
+            <p>Funk Do Saci, Its a Great song.</p>
+            <a href="Downloads/Funk Do Saci- ZRITX.mp3" class="download-btn" download>Listen Song</a>
+        </div>
+
+        <div class="card">
+            <h2>Loku Tak</h2>
+            <p>Loku tak, it's a cool phonk.</p>
+            <a href="Downloads/loku tak.mp3" class="download-btn" download>Listen Song</a>
+        </div>
+
+        <div class="card">
+            <h2>Funk Do Podia</h2>
+            <p>Funk Do Podia, Cool funk.</p>
+            <a href="Downloads/FUNK DO PODIA.mp3" class="download-btn" download>Listen Song</a>
+        </div>
+
+        <div class="card">
+            <h2>Funk do Sentadão</h2>
+            <p>Funk do Sentadão, Great funk.</p>   
+            <a href="Downloads/Funk do Sentadão.mp3"  class="download-btn" download>Listen Song</a>
+        </div>
+        </section>
+
+        <h1>Videos</h1>
+
+        <video controls>
+            <source src="Videos/video of loku tak .mp4" class="video" id="video-container" type="video/mp4">
+            Your browser does not support the video tag.
+
+            <div class="video-container">
+    <video controls>
+        <source src="Videos/video of loku tak .mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+</script>
+</body>
+</body>
+</html>

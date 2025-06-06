@@ -1,0 +1,373 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+}
+
+nav {
+    background-color: #333;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 100%;
+    left: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav li {
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #00ff9d;
+}
+
+nav a:active {
+    color: #005eff;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .contact-box {
+        padding: 20px;
+        margin: 10px;
+        width: 95%;
+    }
+
+    h1 {
+        padding: 0 1rem;
+        font-size: 24px;
+    }
+
+    .input-group {
+        margin-bottom: 20px;
+    }
+
+    input, textarea {
+        font-size: 14px;
+    }
+
+    .send-btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+h1 {
+    text-align: center
+    font-family: sans-serif;
+    color: #333;
+    margin: 2rem 0;
+    padding: 0 10rem;
+}
+
+p {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 1rem 0;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h2 {
+    margin: 1rem;
+    color: #333;
+}
+
+.card p {
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #00ff9d;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.download-btn:hover {
+    background-color: #00cc7d;
+    transform: scale(1.05);
+}
+
+.download-btn:active {
+    background-color: #333;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 600px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+}
+
+.price {
+    color: #00cc7d;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.payment-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #005eff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.payment-btn:hover {
+    background-color: #0046c7;
+    transform: scale(1.05);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#paymentForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#paymentForm input {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.card-details {
+    display: flex;
+    gap: 1rem;
+}
+
+.pay-now-btn {
+    background-color: #00cc7d;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Import your navigation styles from index.css if needed */
+@import url('contact.css');
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+    font-family: Arial, sans-serif;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.contact-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 255, 157, 0.2);
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contact-desc {
+    color: #aaa;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #555;
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: #555;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+input:focus ~ label,
+input:valid ~ label,
+textarea:focus ~ label,
+textarea:valid ~ label {
+    top: -20px;
+    color: #00ff9d;
+    font-size: 14px;
+}
+
+input:focus,
+textarea:focus {
+    border-bottom-color: #00ff9d;
+    outline: none;
+}
+
+.send-btn {
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    background: transparent;
+    border: 2px solid #00ff9d;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0,255,157,0.3) 0%, transparent 70%);
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+}
+
+.send-btn:hover {
+    background: #00ff9d;
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0,255,157,0.4);
+}
+
+.send-btn:hover .btn-glow {
+    transform: rotate(45deg) translateY(-50%);
+}
